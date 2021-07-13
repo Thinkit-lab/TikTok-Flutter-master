@@ -23,7 +23,7 @@ class ProfileScreen extends StatelessWidget {
             children: [
               Icon(Icons.person_add_outlined),
               Text(
-                "Salvador Valverde",
+                "Flutterdevguy",
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
               ),
               Row(
@@ -68,7 +68,7 @@ class ProfileScreen extends StatelessWidget {
                 height: 10,
               ),
               Text(
-                "@salvadordev",
+                "@flutterdevguy",
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
               ),
               SizedBox(
@@ -90,73 +90,76 @@ class ProfileScreen extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Column(
-                    children: [
-                      Text(
-                        "36",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "Following",
-                        style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.normal),
-                      ),
-                    ],
-                  ),
-                  Container(
-                    color: Colors.black54,
-                    width: 1,
-                    height: 15,
-                    margin: EdgeInsets.symmetric(horizontal: 15),
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "13",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "Fans",
-                        style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.normal),
-                      ),
-                    ],
-                  ),
-                  Container(
-                    color: Colors.black54,
-                    width: 1,
-                    height: 15,
-                    margin: EdgeInsets.symmetric(horizontal: 15),
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "143",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "Hearts",
-                        style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.normal),
-                      ),
-                    ],
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal:30.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                      children: [
+                        Text(
+                          "36",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          "Following",
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.normal),
+                        ),
+                      ],
+                    ),
+                    Container(
+                      color: Colors.black54,
+                      width: 1,
+                      height: 15,
+                      margin: EdgeInsets.symmetric(horizontal: 15),
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          "13",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          "Fans",
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.normal),
+                        ),
+                      ],
+                    ),
+                    Container(
+                      color: Colors.black54,
+                      width: 1,
+                      height: 15,
+                      margin: EdgeInsets.symmetric(horizontal: 15),
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          "143",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          "Hearts",
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.normal),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -180,14 +183,14 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 5,
+                    width: 10,
                   ),
                   Container(
                     width: 45,
                     height: 47,
                     decoration: BoxDecoration(
                         border: Border.all(color: Colors.black12)),
-                    child: Center(child: Icon(Icons.bookmark)),
+                    child: Center(child: Icon(Icons.bookmark_outline_outlined)),
                   )
                 ],
               ),
@@ -211,7 +214,7 @@ class ProfileScreen extends StatelessWidget {
                         Container(
                           color: Colors.black,
                           height: 2,
-                          width: 55,
+                          width: 100,
                         )
                       ],
                     ),
@@ -228,27 +231,27 @@ class ProfileScreen extends StatelessWidget {
                         Container(
                           color: Colors.transparent,
                           height: 2,
-                          width: 55,
+                          width: 100,
                         )
                       ],
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Icon(
-                          Icons.lock_outline,
-                          color: Colors.black26,
-                        ),
-                        SizedBox(
-                          height: 7,
-                        ),
-                        Container(
-                          color: Colors.transparent,
-                          height: 2,
-                          width: 55,
-                        )
-                      ],
-                    ),
+                    // Column(
+                    //   mainAxisAlignment: MainAxisAlignment.end,
+                    //   children: [
+                    //     Icon(
+                    //       Icons.lock_outline,
+                    //       color: Colors.black26,
+                    //     ),
+                    //     SizedBox(
+                    //       height: 7,
+                    //     ),
+                    //     Container(
+                    //       color: Colors.transparent,
+                    //       height: 2,
+                    //       width: 55,
+                    //     )
+                    //   ],
+                    // ),
                   ],
                 ),
               ),
