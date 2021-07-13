@@ -12,21 +12,21 @@ class BottomBar extends StatelessWidget {
   const BottomBar({Key? key}) : super(key: key);
 
   Widget get customCreateIcon => Container(
-      width: 45.0,
+      width: 40.0,
       height: 27.0,
       child: Stack(children: [
         Container(
-            margin: EdgeInsets.only(left: 10.0),
+            margin: EdgeInsets.only(left: 15.0),
             width: CreateButtonWidth,
             decoration: BoxDecoration(
                 color: Color.fromARGB(255, 250, 45, 108),
-                borderRadius: BorderRadius.circular(7.0))),
+                borderRadius: BorderRadius.circular(12.0))),
         Container(
-            margin: EdgeInsets.only(right: 10.0),
+            margin: EdgeInsets.only(right: 12.0),
             width: CreateButtonWidth,
             decoration: BoxDecoration(
                 color: Color.fromARGB(255, 32, 211, 234),
-                borderRadius: BorderRadius.circular(7.0))),
+                borderRadius: BorderRadius.circular(15.0))),
         Center(
             child: Container(
           height: double.infinity,
@@ -35,13 +35,13 @@ class BottomBar extends StatelessWidget {
               color: GetIt.instance<FeedViewModel>().actualScreen == 0
                   ? Colors.white
                   : Colors.black,
-              borderRadius: BorderRadius.circular(7.0)),
+              borderRadius: BorderRadius.circular(12.0)),
           child: Icon(
             Icons.add,
             color: GetIt.instance<FeedViewModel>().actualScreen == 0
                 ? Colors.black
                 : Colors.white,
-            size: 20.0,
+            size: 25.0,
           ),
         )),
       ]));
@@ -56,21 +56,26 @@ class BottomBar extends StatelessWidget {
           SizedBox(
             height: 5,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              menuButton('Home', TikTokIcons.home, 0),
-              menuButton('Search', TikTokIcons.search, 1),
-              SizedBox(
-                width: 15,
-              ),
-              customCreateIcon,
-              SizedBox(
-                width: 15,
-              ),
-              menuButton('Messages', TikTokIcons.messages, 2),
-              menuButton('Profile', TikTokIcons.profile, 3)
-            ],
+          Container(
+            alignment: AlignmentDirectional.centerStart,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisSize: MainAxisSize.max,
+
+              children: [
+                menuButton('Home', TikTokIcons.home, 0),
+                menuButton('Search', TikTokIcons.search, 1),
+                // SizedBox(
+                //   width: 15,
+                // ),
+                customCreateIcon,
+                // SizedBox(
+                //   width: 15,
+                // ),
+                menuButton('Messages', TikTokIcons.messages, 2),
+                menuButton('Profile', TikTokIcons.profile, 3)
+              ],
+            ),
           ),
           SizedBox(
             height: Platform.isIOS ? 40 : 10,
