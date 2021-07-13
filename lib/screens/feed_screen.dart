@@ -13,6 +13,10 @@ import 'package:get_it/get_it.dart';
 import 'package:stacked/stacked.dart';
 import 'package:video_player/video_player.dart';
 
+
+
+
+
 class FeedScreen extends StatefulWidget {
   FeedScreen({Key? key}) : super(key: key);
 
@@ -34,7 +38,7 @@ class _FeedScreenState extends State<FeedScreen> {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<FeedViewModel>.reactive(
-        disposeViewModel: false,
+        disposeViewModel: true,
         builder: (context, model, child) => videoScreen(),
         viewModelBuilder: () => feedViewModel);
   }
