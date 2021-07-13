@@ -10,6 +10,6 @@ Future<void> main() async {
   setup();
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: HomePage(),
+    home: FeedScreen()
   ));
 }

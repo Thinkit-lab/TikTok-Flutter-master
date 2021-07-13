@@ -16,17 +16,17 @@ class BottomBar extends StatelessWidget {
       height: 27.0,
       child: Stack(children: [
         Container(
-            margin: EdgeInsets.only(left: 10.0),
+            margin: EdgeInsets.only(left: 15.0),
             width: CreateButtonWidth,
             decoration: BoxDecoration(
                 color: Color.fromARGB(255, 250, 45, 108),
-                borderRadius: BorderRadius.circular(7.0))),
+                borderRadius: BorderRadius.circular(12.0))),
         Container(
-            margin: EdgeInsets.only(right: 10.0),
+            margin: EdgeInsets.only(right: 12.0),
             width: CreateButtonWidth,
             decoration: BoxDecoration(
                 color: Color.fromARGB(255, 32, 211, 234),
-                borderRadius: BorderRadius.circular(7.0))),
+                borderRadius: BorderRadius.circular(15.0))),
         Center(
             child: Container(
           height: double.infinity,
@@ -35,13 +35,13 @@ class BottomBar extends StatelessWidget {
               color: GetIt.instance<FeedViewModel>().actualScreen == 0
                   ? Colors.white
                   : Colors.black,
-              borderRadius: BorderRadius.circular(7.0)),
+              borderRadius: BorderRadius.circular(12.0)),
           child: Icon(
             Icons.add,
             color: GetIt.instance<FeedViewModel>().actualScreen == 0
                 ? Colors.black
                 : Colors.white,
-            size: 20.0,
+            size: 25.0,
           ),
         )),
       ]));
