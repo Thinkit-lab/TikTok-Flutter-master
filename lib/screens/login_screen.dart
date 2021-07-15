@@ -18,92 +18,84 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
+      backgroundColor: Colors.white,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
           Container(
-            height: MediaQuery.of(context).size.height,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(8.0),
-            color: Colors.white),
+            // alignment: AlignmentDirectional.topCenter,
+            // width: 100,
+            // height: 120,
+            child: Image.asset(
+              "assets/images/logo.jpeg",
+              width: 100,
+              height: 100,
+            ),
           ),
-          Padding(
-           padding: const EdgeInsets.symmetric(vertical:40.0, horizontal: 12.0),
-            child: ListView(
-              children: <Widget>[
-                Container(
-                  height: 350,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(12.0),
-            color: Colors.purple.shade400),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text("Login",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: Colors.white70,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 28.0)),
-                      Card(
-                        margin: EdgeInsets.only(left: 30, right: 30, top: 30),
-                        elevation: 11,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(40))),
-                        child: TextField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(
-                                Icons.person,
-                                color: Colors.black26,
-                              ),
-                              suffixIcon: Icon(
-                                Icons.check_circle,
-                                color: Colors.black26,
-                              ),
-                              hintText: "Email",
-                              hintStyle: TextStyle(color: Colors.black26),
-                              filled: true,
-                              fillColor: Colors.white,
-                              border: OutlineInputBorder(
-                                borderSide: BorderSide.none,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(40.0)),
-                              ),
-                              contentPadding: EdgeInsets.symmetric(
-                                  horizontal: 20.0, vertical: 16.0)),
-                        ),
-                      ),
-                      Card(
-                        margin: EdgeInsets.only(left: 30, right: 30, top: 20),
-                        elevation: 11,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(40))),
-                        child: TextField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(
-                                Icons.lock,
-                                color: Colors.black26,
-                              ),
-                              hintText: "Password",
-                              hintStyle: TextStyle(
-                                color: Colors.black26,
-                              ),
-                              filled: true,
-                              fillColor: Colors.white,
-                              border: OutlineInputBorder(
-                                borderSide: BorderSide.none,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(40.0)),
-                              ),
-                              contentPadding: EdgeInsets.symmetric(
-                                  horizontal: 20.0, vertical: 16.0)),
-                        ),
-                      ),
+          // ListView(
+          //   children: <Widget>[
+          Card(
+            margin: EdgeInsets.only(left: 30, right: 30, top: 20),
+            elevation: 5,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(40))),
+            child: TextField(
+              decoration: InputDecoration(
+                  prefixIcon: Icon(
+                    Icons.email,
+                    color: Colors.black26,
+                  ),
+                  // suffixIcon: Icon(
+                  //   Icons.check_circle,
+                  //   color: Colors.black26,
+                  // ),
+                  hintText: "Email",
+                  hintStyle: TextStyle(color: Colors.black26),
+                  filled: true,
+                  fillColor: Colors.grey.shade400,
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.all(Radius.circular(40.0)),
+                  ),
+                  contentPadding:
+                      EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0)),
+            ),
+          ),
+          
+          Card(
+            margin: EdgeInsets.only(left: 30, right: 30, top: 20),
+            elevation: 5,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(40))),
+            child: TextField(
+              decoration: InputDecoration(
+                  prefixIcon: Icon(
+                    Icons.lock,
+                    color: Colors.black26,
+                  ),
+                  hintText: "Password",
+                  hintStyle: TextStyle(
+                    color: Colors.black26,
+                  ),
+                  filled: true,
+                  fillColor: Colors.grey.shade400,
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.all(Radius.circular(40.0)),
+                  ),
+                  contentPadding:
+                      EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0)),
+            ),
+          ),
+                      
                       Container(
-                        width: 150,
+                        width: 300,
                         padding: EdgeInsets.all(30.0),
                         child: RaisedButton(
                           padding: EdgeInsets.symmetric(vertical: 16.0),
-                          color: Colors.white54,
+                          color: Colors.purple,
                           onPressed: () {},
-                          elevation: 11,
+                          elevation: 5,
                           shape: RoundedRectangleBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(40.0))),
@@ -112,18 +104,15 @@ class _LoginPageState extends State<LoginPage> {
                               Navigator.push(context, MaterialPageRoute(builder: (context)=>FeedScreen()));
                             },
                                                       child: Text("Login",
-                                style: TextStyle(color: Colors.purple.shade900,fontWeight: FontWeight.bold)),
+                                style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)),
                           ),
                         ),
                       ),
                       Text("Forgot your password?",
-                          style: TextStyle(color: Colors.white))
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 100,
-                ),
+                          style: TextStyle(color: Colors.black)),
+                          SizedBox(
+                            height: 30,
+                          ),
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Column(
@@ -178,7 +167,7 @@ class _LoginPageState extends State<LoginPage> {
                         children: <Widget>[
                           Text("Dont have an account?", style: TextStyle(fontSize: 16),),
                           FlatButton(
-                            child: Text("Sign up",style: TextStyle(fontSize: 16)),
+                            child: Text("Sign Up",style: TextStyle(fontSize: 16)),
                             textColor: Colors.purple.shade900,
                             onPressed: () {
                               Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpPage()));
@@ -191,9 +180,6 @@ class _LoginPageState extends State<LoginPage> {
                 )
               ],
             ),
-          ),
-        ],
-      ),
-    );
+          );
   }
 }
