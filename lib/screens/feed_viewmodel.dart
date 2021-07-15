@@ -20,7 +20,7 @@ class FeedViewModel extends BaseViewModel {
       await videoSource!.listVideos[index].loadController();
     }
     videoSource!.listVideos[index].controller!.play();
-    videoSource!.listVideos[prevVideo].controller!.removeListener(() {});
+    // videoSource!.listVideos[prevVideo].controller!.removeListener(() {});
 
     if (videoSource!.listVideos[prevVideo].controller != null)
       videoSource!.listVideos[prevVideo].controller!.pause();

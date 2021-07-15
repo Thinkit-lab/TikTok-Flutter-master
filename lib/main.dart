@@ -1,8 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:tiktok_flutter/Home/home_page.dart';
+import 'package:tiktok_flutter/screens/login_screen.dart';
 import 'package:tiktok_flutter/screens/feed_screen.dart';
 import 'package:tiktok_flutter/service_locator.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,6 +11,6 @@ Future<void> main() async {
   setup();
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: FeedScreen()
+    home: LoginPage()
   ));
 }
